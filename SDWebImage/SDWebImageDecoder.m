@@ -13,6 +13,9 @@
 @implementation UIImage (ForceDecode)
 
 + (UIImage *)decodedImageWithImage:(UIImage *)image {
+    // this stupid thing causes memory to epxlode...just return the image and the memory problem goes away
+    return image;
+    
     if (image.images) {
         // Do not decode animated images
         return image;
